@@ -70,7 +70,7 @@ class WordEmbedding:
                     vecs.append(model.wv[w])
                 
             else:
-                with open(fname, "r", encoding='utf8') as f:
+                with open(fname, "r", encoding='utf-8') as f:
                     for line in f:
                         s = line.split(" ")
                         v = np.array([float(x) for x in s[1:]])

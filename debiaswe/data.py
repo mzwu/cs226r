@@ -11,13 +11,13 @@ Tolga Bolukbasi, Kai-Wei Chang, James Zou, Venkatesh Saligrama, and Adam Kalai
 PKG_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-def load_professions_pt():
-    professions_file = os.path.join(PKG_DIR, '../data', 'professions_pt.json')
-    with open(professions_file, 'r') as f:
-        professions = json.load(f)
-    print('Loaded professions\n' +
+def load_attributes_el():
+    attributes_file = os.path.join(PKG_DIR, '../data', 'attributes_el.json')
+    with open(attributes_file, 'r', encoding='utf-8') as f:
+        attributes = json.load(f)
+    print('Loaded attributes\n' +
           'Format:\n' +
           'word,\n' +
           'definitional female -1.0 -> definitional male 1.0\n' +
           'stereotypical female -1.0 -> stereotypical male 1.0')
-    return professions
+    return attributes
