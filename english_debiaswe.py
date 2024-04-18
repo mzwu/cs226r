@@ -8,23 +8,23 @@ from gensim.models import KeyedVectors
 import debiaswe as dwe
 import debiaswe.we as we
 from debiaswe.we import WordEmbedding
-from debiaswe.data import load_attributes_el
+from debiaswe.data import load_attributes_en
 from debiaswe.debias import debias
 
 # load subtitle word embeddings
-E = WordEmbedding('./data/greek_subs.vec')
+E = WordEmbedding('./data/english_subs.vec')
 
 # load attributes
-attributes = load_attributes_el()
+attributes = load_attributes_en()
 attributes_words = [p for p in attributes]
 
 # Define gender direction
-v_gender = E.diff("αυτή", "αυτός")
+v_gender = E.diff("she", "he")
 
 # Load anology pairs
 anologies_pair=set()
 
-with open('./data/greek_analogies.tsv', "r", encoding = "utf-8") as f:
+with open('./data/english_analogies.tsv', "r", encoding = "utf-8") as f:
     for line in f:
         if "#" in line:
             continue
@@ -47,7 +47,7 @@ def evaluate_w2c(E, analogies_pair):
         fema=p[1]
         # word vectors
         if (male in word_vectors and fema in word_vectors):
-            x = word_vectors.most_similar(positive=['άνδρας', male], negative=['γυναίκα'])[0][0]
+            x = word_vectors.most_similar(positive=['man', male], negative=['woman'])[0][0]
             print (male+"="+x+"-"+fema)
             if x== fema:
                 acc+=1
@@ -62,14 +62,14 @@ def evaluate_w2c(E, analogies_pair):
 evaluate_w2c(E, anologies_pair)
 
 # Load definitional, equalizer, and gender specific words
-with open('./data/definitional_el.json', "r", encoding = "utf-8") as f:
+with open('./data/definitional.json', "r", encoding = "utf-8") as f:
     defs = json.load(f)
 print("definitional", defs)
 
-with open('./data/equalize_el.json', "r", encoding = "utf-8") as f:
+with open('./data/equalize.json', "r", encoding = "utf-8") as f:
     equalize_pairs = json.load(f)
 
-with open('./data/gender_specific_el.json', "r", encoding = "utf-8") as f:
+with open('./data/gender_specific.json', "r", encoding = "utf-8") as f:
     gender_specific_words = json.load(f)
 print("gender specific", len(gender_specific_words), gender_specific_words[:10])
 

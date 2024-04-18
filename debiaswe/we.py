@@ -73,6 +73,8 @@ class WordEmbedding:
                 with open(fname, "r", encoding='utf-8') as f:
                     for line in f:
                         s = line.split(" ")
+                        if "#" in s:
+                            continue
                         v = np.array([float(x) for x in s[1:]])
                         if len(vecs) and vecs[-1].shape!=v.shape:
                             error_count+=1
