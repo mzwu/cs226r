@@ -22,6 +22,17 @@ def load_attributes_el():
           'stereotypical female -1.0 -> stereotypical male 1.0')
     return attributes
 
+def load_attributes_hu():
+    attributes_file = os.path.join(PKG_DIR, '../data', 'attributes_hu.json')
+    with open(attributes_file, 'r', encoding='utf-8') as f:
+        attributes = json.load(f)
+    print('Loaded attributes\n' +
+          'Format:\n' +
+          'word,\n' +
+          'definitional female -1.0 -> definitional male 1.0\n' +
+          'stereotypical female -1.0 -> stereotypical male 1.0')
+    return attributes
+
 def load_attributes_en():
     attributes_file = os.path.join(PKG_DIR, '../data', 'attributes.json')
     with open(attributes_file, 'r', encoding='utf-8') as f:

@@ -49,7 +49,7 @@ def evaluate_w2c(E, analogies_pair):
         if (male in word_vectors and fema in word_vectors):
             x = word_vectors.most_similar(positive=['άνδρας', male], negative=['γυναίκα'])[0][0]
             print (male+"="+x+"-"+fema)
-            if x== fema:
+            if x.lower() == fema.lower() or male.lower() == x.lower():
                 acc+=1
 
     out = acc/float(len_)
