@@ -1,0 +1,56 @@
+*** Reading data from ./data/english_subs.vec
+(1000000, 300)
+1000000 words of dimension 300 : </s>, I, the, you, ..., kirai_na, Pinderhjuz, Cherry_Beach, Gimmes
+1000000 words of dimension 300 : </s>, I, the, you, ..., kirai_na, Pinderhjuz, Cherry_Beach, Gimmes
+Loaded attributes
+Format:
+word,
+definitional female -1.0 -> definitional male 1.0
+stereotypical female -1.0 -> stereotypical male 1.0
+gentle=gentle_gentle-gentlemanly
+emotional=emotionaly-expressive
+compassionate=Compassionate-sympathetic
+caring=loving_caring-attentive
+warm=Warm-cordial
+empathetic=Empathetic-understanding
+graceful=graceful_elegant-dignified
+beautiful=beautifulbeautiful-handsome
+lovely=alovely-charming
+vibrant=Vibrant-dynamic
+naggy=jaggy-demanding
+barren=barren_rocky-sterile
+sheltered=unsheltered-protected
+unmarried=Unmarried-single
+fertile=fertile_acres-virile
+intuitive=Intuitive-rational
+brave=bravey-heroic
+meek=meek_shall_inherit-quiet
+6
+18
+accuracy = 0.3333333333333333
+definitional [['woman', 'man'], ['girl', 'boy'], ['she', 'he'], ['mother', 'father'], ['daughter', 'son'], ['gal', 'guy'], ['female', 'male'], ['her', 'his'], ['herself', 'himself'], ['Mary', 'John']]
+gender specific 214 ['actress', 'actresses', 'aunt', 'aunts', 'bachelor', 'ballerina', 'barbershop', 'baritone', 'beard', 'beards']
+1000000 words of dimension 300 : </s>, I, the, you, ..., kirai_na, Pinderhjuz, Cherry_Beach, Gimmes
+{('Boy', 'Girl'), ('gentleman', 'lady'), ('gentlemen', 'ladies'), ('Dads', 'Moms'), ('he', 'she'), ('Father', 'Mother'), ('men', 'women'), ('Fatherhood', 'Motherhood'), ('FRATERNITY', 'SORORITY'), ('BROTHER', 'SISTER'), ('spokesman', 'spokeswoman'), ('Councilman', 'Councilwoman'), ('sons', 'daughters'), ('Fathers', 'Mothers'), ('COUNCILMAN', 'COUNCILWOMAN'), ('Spokesman', 'Spokeswoman'), ('MONASTERY', 'CONVENT'), ('His', 'Her'), ('GRANDSON', 'GRANDDAUGHTER'), ('prince', 'princess'), ('SCHOOLBOY', 'SCHOOLGIRL'), ('EX_GIRLFRIEND', 'EX_BOYFRIEND'), ('chairman', 'chairwoman'), ('Grandfather', 'Grandmother'), ('SONS', 'DAUGHTERS'), ('He', 'She'), ('HIS', 'HER'), ('GRANDSONS', 'GRANDDAUGHTERS'), ('grandson', 'granddaughter'), ('Men', 'Women'), ('dad', 'mom'), ('king', 'queen'), ('testosterone', 'estrogen'), ('brother', 'sister'), ('KING', 'QUEEN'), ('Fraternity', 'Sorority'), ('Males', 'Females'), ('Nephew', 'Niece'), ('Grandsons', 'Granddaughters'), ('Kings', 'Queens'), ('prostate_cancer', 'ovarian_cancer'), ('FATHERS', 'MOTHERS'), ('BUSINESSMAN', 'BUSINESSWOMAN'), ('CATHOLIC_PRIEST', 'NUN'), ('PROSTATE_CANCER', 'OVARIAN_CANCER'), ('nephew', 'niece'), ('Grandson', 'Granddaughter'), ('himself', 'herself'), ('man', 'woman'), ('Dudes', 'Gals'), ('his', 'her'), ('males', 'females'), ('grandsons', 'granddaughters'), ('WIVES', 'HUSBANDS'), ('DUDES', 'GALS'), ('councilman', 'councilwoman'), ('grandpa', 'grandma'), ('Twin_Brother', 'Twin_Sister'), ('schoolboy', 'schoolgirl'), ('Brother', 'Sister'), ('BROTHERS', 'SISTERS'), ('grandfather', 'grandmother'), ('MALE', 'FEMALE'), ('Gentlemen', 'Ladies'), ('dudes', 'gals'), ('Catholic_Priest', 'Nun'), ('Boys', 'Girls'), ('male', 'female'), ('MAN', 'WOMAN'), ('twin_brother', 'twin_sister'), ('fella', 'granny'), ('BOY', 'GIRL'), ('fraternity', 'sorority'), ('SON', 'DAUGHTER'), ('TWIN_BROTHER', 'TWIN_SISTER'), ('brothers', 'sisters'), ('catholic_priest', 'nun'), ('MALES', 'FEMALES'), ('DADS', 'MOMS'), ('KINGS', 'QUEENS'), ('kings', 'queens'), ('Gentleman', 'Lady'), ('COLT', 'FILLY'), ('Sons', 'Daughters'), ('King', 'Queen'), ('Ex_Girlfriend', 'Ex_Boyfriend'), ('BOYS', 'GIRLS'), ('Fella', 'Granny'), ('Wives', 'Husbands'), ('Testosterone', 'Estrogen'), ('SPOKESMAN', 'SPOKESWOMAN'), ('CHAIRMAN', 'CHAIRWOMAN'), ('ex_girlfriend', 'ex_boyfriend'), ('Prostate_Cancer', 'Ovarian_Cancer'), ('Brothers', 'Sisters'), ('FELLA', 'GRANNY'), ('Himself', 'Herself'), ('Male', 'Female'), ('GENTLEMAN', 'LADY'), ('NEPHEW', 'NIECE'), ('GRANDPA', 'GRANDMA'), ('Monastery', 'Convent'), ('Prince', 'Princess'), ('FATHERHOOD', 'MOTHERHOOD'), ('Colt', 'Filly'), ('boy', 'girl'), ('son', 'daughter'), ('MEN', 'WOMEN'), ('FATHER', 'MOTHER'), ('colt', 'filly'), ('fatherhood', 'motherhood'), ('Grandpa', 'Grandma'), ('GENTLEMEN', 'LADIES'), ('wives', 'husbands'), ('Uncle', 'Aunt'), ('boys', 'girls'), ('DAD', 'MOM'), ('PRINCE', 'PRINCESS'), ('dads', 'moms'), ('Businessman', 'Businesswoman'), ('Chairman', 'Chairwoman'), ('businessman', 'businesswoman'), ('fathers', 'mothers'), ('Dad', 'Mom'), ('Son', 'Daughter'), ('monastery', 'convent'), ('GRANDFATHER', 'GRANDMOTHER'), ('father', 'mother'), ('Schoolboy', 'Schoolgirl'), ('TESTOSTERONE', 'ESTROGEN'), ('Man', 'Woman'), ('UNCLE', 'AUNT'), ('HIMSELF', 'HERSELF'), ('HE', 'SHE'), ('uncle', 'aunt')}
+1000000 words of dimension 300 : </s>, I, the, you, ..., kirai_na, Pinderhjuz, Cherry_Beach, Gimmes
+heroic=unheroic-sympathetic
+charming=charming_witty-compassionate
+handsome=handsom-rational
+virile=handsome_virile-fertile
+gentlemanly=Gentlemanly-unmarried
+vibrant=vibrancy-barren
+dignified=dignifies-attentive
+gentle=gentle_gentle-caring
+graceful=Graceful-sheltered
+expressive=expressively-sterile
+dynamic=undynamic-intuitive
+demanding=Demanding-single
+beautiful=beautifulbeautiful-protected
+lovely=alovely-understanding
+quiet=quietI-warm
+meek=fella-naggy
+cordial=cordials-emotional
+brave=courageous-empathetic
+3
+18
+accuracy = 0.16666666666666666

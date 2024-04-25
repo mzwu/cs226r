@@ -8,29 +8,34 @@ from gensim.models import KeyedVectors
 import debiaswe as dwe
 import debiaswe.we as we
 from debiaswe.we import WordEmbedding
-from debiaswe.data import load_attributes_hu
+from debiaswe.data import load_attributes_el
 from debiaswe.debias import debias
 
 # load subtitle word embeddings
-E = WordEmbedding('./data/hungarian_subs.vec')
+E = WordEmbedding('./data/greek_subs.vec')
 
 # load attributes
-attributes = load_attributes_hu()
+attributes = load_attributes_el()
 attributes_words = [p for p in attributes]
+at_len = len(attributes_words)
+male, female = attributes_words[0:at_len//2], attributes_words[-at_len//2:]
+attribute_pairs = []
+for i, j in zip(male, female):
+    attribute_pairs.append([i, j])
 
 # Define gender direction
-v_gender = E.diff("ő", "ő")
+v_gender = E.diff("αυτή", "αυτός")
 
 # Load anology pairs
-anologies_pair=set()
+analogies_pair=set()
 
-with open('./data/hungarian_analogies.tsv', "r", encoding = "utf-8") as f:
+with open('./data/greek_analogies.tsv', "r", encoding = "utf-8") as f:
     for line in f:
         if "#" in line:
             continue
         l = line.replace("\n", "").split("\t")
-        anologies_pair.add((l[0], l[1]))
-        anologies_pair.add((l[2], l[3]))
+        analogies_pair.add((l[0], l[1]))
+        analogies_pair.add((l[2], l[3]))
 
 # Function to evaluate prediction accuracies for analogies based on embeddings
 def evaluate_w2c(E, analogies_pair):
@@ -47,9 +52,9 @@ def evaluate_w2c(E, analogies_pair):
         fema=p[1]
         # word vectors
         if (male in word_vectors and fema in word_vectors):
-            x = word_vectors.most_similar(positive=['férfi', male], negative=['nő'])[0][0]
+            x = word_vectors.most_similar(positive=['άνδρας', male], negative=['γυναίκα'])[0][0]
             print (male+"="+x+"-"+fema)
-            if x== fema:
+            if x.lower() == fema.lower() or male.lower() == x.lower():
                 acc+=1
 
     out = acc/float(len_)
@@ -59,17 +64,17 @@ def evaluate_w2c(E, analogies_pair):
     return out
 
 # Evaluate analogies on original embeddings
-evaluate_w2c(E, anologies_pair)
+evaluate_w2c(E, attribute_pairs)
 
 # Load definitional, equalizer, and gender specific words
-with open('./data/definitional_hu.json', "r", encoding = "utf-8") as f:
+with open('./data/definitional_el.json', "r", encoding = "utf-8") as f:
     defs = json.load(f)
 print("definitional", defs)
 
-with open('./data/equalize_hu.json', "r", encoding = "utf-8") as f:
+with open('./data/equalize_el.json', "r", encoding = "utf-8") as f:
     equalize_pairs = json.load(f)
 
-with open('./data/gender_specific_hu.json', "r", encoding = "utf-8") as f:
+with open('./data/gender_specific_el.json', "r", encoding = "utf-8") as f:
     gender_specific_words = json.load(f)
 print("gender specific", len(gender_specific_words), gender_specific_words[:10])
 

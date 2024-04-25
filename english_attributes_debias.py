@@ -17,20 +17,14 @@ E = WordEmbedding('./data/english_subs.vec')
 # load attributes
 attributes = load_attributes_en()
 attributes_words = [p for p in attributes]
+at_len = len(attributes_words)
+male, female = attributes_words[0:at_len//2], attributes_words[-at_len//2:]
+attribute_pairs = []
+for i, j in zip(male, female):
+    attribute_pairs.append([i, j])
 
 # Define gender direction
 v_gender = E.diff("she", "he")
-
-# Load anology pairs
-analogies_pair=set()
-
-with open('./data/english_analogies.tsv', "r", encoding = "utf-8") as f:
-    for line in f:
-        if "#" in line:
-            continue
-        l = line.replace("\n", "").split("\t")
-        analogies_pair.add((l[0], l[1]))
-        analogies_pair.add((l[2], l[3]))
 
 # Function to evaluate prediction accuracies for analogies based on embeddings
 def evaluate_w2c(E, analogies_pair):
@@ -59,7 +53,7 @@ def evaluate_w2c(E, analogies_pair):
     return out
 
 # Evaluate analogies on original embeddings
-evaluate_w2c(E, analogies_pair)
+evaluate_w2c(E, attribute_pairs)
 
 # Load definitional, equalizer, and gender specific words
 with open('./data/definitional.json', "r", encoding = "utf-8") as f:
@@ -76,5 +70,13 @@ print("gender specific", len(gender_specific_words), gender_specific_words[:10])
 # Debias embeddings based on the above data
 E_new = debias(E, gender_specific_words, defs, equalize_pairs)
 
+sp_debiased = sorted([(E.v(w).dot(v_gender), w) for w in attributes_words])
+sp_len = len(sp_debiased)
+
+male, female = sp_debiased[0:sp_len//2], sp_debiased[-sp_len//2:]
+debiased_pairs = []
+for i, j in zip(male, female):
+    debiased_pairs.append([i[1],j[1]])
+
 # Evaluate analogies based on debiased embeddings
-evaluate_w2c(E_new, analogies_pair)
+evaluate_w2c(E_new,debiased_pairs)
