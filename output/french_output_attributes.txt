@@ -1,0 +1,56 @@
+*** Reading data from ./data/french_subs.vec
+(514066, 300)
+514066 words of dimension 300 : </s>, de, est, que, ..., Svlinken, Bvlgari, Orchestrer, perturberaient
+514066 words of dimension 300 : </s>, de, est, que, ..., Svlinken, Bvlgari, Orchestrer, perturberaient
+Loaded attributes
+Format:
+word,
+definitional female -1.0 -> definitional male 1.0
+stereotypical female -1.0 -> stereotypical male 1.0
+doux=doucereux-gentleman
+émotionnel=Émotionnel-expressif
+compatissant=Compatissant-sympathique
+bienveillance=bienveillant-attentif
+chaud=froid-cordial
+empathique=Empathique-compréhension
+gracieux=gracieux_souverain-digne
+beau=élégant-beau
+beau=élégant-charmant
+vibrant=Vibrant-dynamique
+coquin=petit_coquin-exigeant
+dénudé=dénudés-stérile
+protégé=Protégé-protégé
+célibataire=célibataire_endurci-célibataire
+fertile=fertiles-virile
+intuitif=intuitifs-rationnel
+courageux=Courageux-héroïque
+doux=doucereux-calme
+6
+18
+accuracy = 0.3333333333333333
+definitional [['femme', 'homme'], ['fille', 'garçon'], ['elle', 'il'], ['mamman', 'papa'], ['fille', 'fils'], ['gal', 'guy'], ['feminine', 'masculine'], ['sa', 'son'], ['se', 'LUI_MÊME'], ['Marie', 'Jean']]
+gender specific 214 ['actrice', 'actrices', 'tante', 'tantes', 'célibataire', 'ballerine', 'salon_de_coiffure', 'baryton', 'barbe', 'barbes']
+514066 words of dimension 300 : </s>, de, est, que, ..., Svlinken, Bvlgari, Orchestrer, perturberaient
+{('pères', 'mères'), ('CONSEILLER', 'CONSEILLÈRE'), ('PÈRE', 'MÈRE'), ('messieurs', 'dames'), ('mâles', 'femelles'), ('rois', 'reines'), ('LE_PRÊTRE', 'RELIGIEUSE'), ('paternité', 'maternité'), ('papa', 'maman'), ('Homme', 'Femme'), ('Gentleman', 'Dame'), ('PAPAS', 'MAMANS'), ('GARÇON', 'FILLE'), ('Ex_Petite_Amie', 'Ex_Petit_Ami'), ('garçon', 'fille'), ('Son', 'Elle'), ('Épouses', 'Maris'), ('gars', 'mamie'), ('Roi', 'Reine'), ('son', 'elle'), ('Fraternité', 'Sororité'), ('Neveu', 'Nièce'), ('Oncle', 'Tante'), ('frères', 'soeurs'), ('porte_parole', 'porte_parole'), ('GENTLEMAN', 'DAME'), ('Conseiller', 'Conseillère'), ('PORTE_PAROLE', 'PORTE_PAROLE'), ('GARÇONS', 'FILLES'), ('PRÉSIDENT', 'PRÉSIDENTE'), ('GARS', 'MAMIE'), ('hommes', 'femmes'), ('Petits_Fils', 'Petites_Filles'), ('CANCER_DE_LA_PROSTATE', 'CANCER_DES_OVAIRES'), ('homme', 'femme'), ('Mâles', 'Femelles'), ('TESTOSTÉRONE', 'OESTROGÈNE'), ('ÉCOLIER', 'ÉCOLIÈRE'), ('conseiller', 'conseillère'), ('IL', 'ELLE'), ('Frères', 'Soeurs'), ('PETIT_FILS', 'PETITE_FILLE'), ('lui_même', 'se'), ('PATERNITÉ', 'MATERNITÉ'), ('Le_Prêtre', 'Religieuse'), ('LUI_MÊME', 'SE'), ('Testostérone', 'Oestrogène'), ('Garçons', 'Filles'), ('Mecs', 'Meufs'), ('épouses', 'maris'), ('Frère', 'Soeur'), ('MÂLES', 'FEMELLES'), ('prince', 'princesse'), ('GRAND_PÈRE', 'GRAND_MÈRE'), ('garçons', 'filles'), ('Grand_Père', 'Grand_Mère'), ('SON', 'ELLE'), ('monastère', 'couvent'), ('Fils', 'Filles'), ('Frère_Jumeau', 'Sœur_Jumelle'), ('HOMME', 'FEMME'), ('POULAIN', 'POULICHE'), ('ROI', 'REINE'), ('petit_fils', 'petite_fille'), ('il', 'elle'), ('FRÈRE_JUMEAU', 'SŒUR_JUMELLE'), ('neveu', 'nièce'), ('fils', 'fille'), ('Hommes', 'Femmes'), ('NEVEU', 'NIÈCE'), ('père', 'mère'), ('Papas', 'Mamans'), ('roi', 'reine'), ('PAPA', 'MAMAN'), ("homme_d'affaires", "femme_d'affaires"), ('ex_petite_amie', 'ex_petit_ami'), ('Rois', 'Reines'), ('Écolier', 'Écolière'), ('oncle', 'tante'), ('FILS', 'FILLES'), ('FRÈRE', 'SOEUR'), ('FRATERNITÉ', 'SORORITÉ'), ('le_prêtre', 'religieuse'), ('cancer_de_la_prostate', 'cancer_des_ovaires'), ('grand_père', 'grand_mère'), ('ROIS', 'REINES'), ('PETITS_FILS', 'PETITES_FILLES'), ('MONASTÈRE', 'COUVENT'), ('écolier', 'écolière'), ('président', 'présidente'), ('Poulain', 'Pouliche'), ('Lui_Même', 'Se'), ("Homme_D'Affaires", "Femme_D'Affaires"), ('mecs', 'meufs'), ('Gars', 'Mamie'), ('FILS', 'FILLE'), ('testostérone', 'oestrogène'), ('Papa', 'Maman'), ('Messieurs', 'Dames'), ('MECS', 'MEUFS'), ('Porte_Parole', 'Porte_Parole'), ('papas', 'mamans'), ('MESSIEURS', 'DAMES'), ('Président', 'Présidente'), ('EX_PETITE_AMIE', 'EX_PETIT_AMI'), ('Père', 'Mère'), ('Il', 'Elle'), ('frère_jumeau', 'sœur_jumelle'), ('PÈRES', 'MÈRES'), ('Paternité', 'Maternité'), ('ÉPOUSES', 'MARIS'), ('fraternité', 'sororité'), ('HOMMES', 'FEMMES'), ('Pères', 'Mères'), ('gentleman', 'dame'), ('Garçon', 'Fille'), ("HOMME_D'AFFAIRES", "FEMME_D'AFFAIRES"), ('Petit_Fils', 'Petite_Fille'), ('Fils', 'Fille'), ('Monastère', 'Couvent'), ('PRINCE', 'PRINCESSE'), ('frère', 'soeur'), ('Cancer_De_La_Prostate', 'Cancer_Des_Ovaires'), ('FRÈRES', 'SOEURS'), ('fils', 'filles'), ('Prince', 'Princesse'), ('petits_fils', 'petites_filles'), ('ONCLE', 'TANTE'), ('poulain', 'pouliche')}
+514066 words of dimension 300 : </s>, de, est, que, ..., Svlinken, Bvlgari, Orchestrer, perturberaient
+gentleman=Gentleman-dynamique
+chaud=Gars-sympathique
+courageux=fils-bienveillance
+rationnel=Irrationnel-exigeant
+attentif=attentifs-stérile
+doux=fils-cordial
+doux=fils-vibrant
+calme=Gars-protégé
+beau=fils-protégé
+beau=fils-fertile
+beau=fils-gracieux
+compréhension=Compréhension-coquin
+charmant=fils-expressif
+intuitif=intuitifs-digne
+héroïque=Héroïque-émotionnel
+dénudé=fils-empathique
+virile=fils-célibataire
+compatissant=Compatissant-célibataire
+4
+18
+accuracy = 0.2222222222222222
